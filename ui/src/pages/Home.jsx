@@ -53,7 +53,7 @@ export default function Home() {
           <img src={heroImg} alt="" />
         </div>
       </div>
-      <Corosal />
+      {/* <Corosal /> */}
       <div className="vedic-wellness-center">
         <div className="disp">
           <div className="left">

@@ -140,4 +140,7 @@ const Container = styled.div`
       transform: translateX(calc(-250px * 7));
     }
   }
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
