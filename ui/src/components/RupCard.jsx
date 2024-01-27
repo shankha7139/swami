@@ -62,13 +62,13 @@ export default function () {
 }
 
 const Container = styled.div`
+  margin-top: 3%;
   main {
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
     grid-gap: 40px;
     padding: 60px 0;
   }
-
   .text--medium {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;

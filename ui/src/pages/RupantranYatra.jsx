@@ -78,8 +78,8 @@ export default function AllPrograms() {
         <img src={pic2} alt="" />
         <img src={pic3} alt="" />
       </div>
+      <h1 className="marqHead">Media Coverage</h1>
       <div className="marq">
-        <h1>Media Coverage</h1>
         <Marquee className="marquee">
           <img
             onClick={(e) =>
@@ -155,10 +155,21 @@ export default function AllPrograms() {
 
 const Container = styled.div`
   .galHead {
-    margin-left: 38%;
     font-size: 40px;
     font-weight: 500;
     color: #02a66e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .marqHead {
+    font-size: 40px;
+    font-weight: 500;
+    color: #02a66e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
   }
   .end-banner {
     img {
@@ -231,15 +242,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2% 0%;
-    h1 {
-      background: #bedcd5;
-      width: 100%;
-      padding: 0.5% 0%;
-      padding-left: 43%;
-      color: #fff;
-      font-weight: bolder;
-    }
+    margin: 0.5% 0%;
     .marquee {
       img {
         margin-left: 100px;
@@ -299,10 +302,13 @@ const Container = styled.div`
   @media screen and (max-width: 481px) {
     .galHead {
       font-size: 24px;
-      margin-left: 32%;
+    }
+    .marqHead {
+      font-size: 24px;
     }
 
     .hero {
+      padding-top: 20%;
       h1 {
         font-size: 24px;
       }
@@ -329,7 +335,9 @@ const Container = styled.div`
   @media screen and (max-width: 750px) {
     .galHead {
       font-size: 30px;
-      margin-left: 32%;
+    }
+    .marqHead {
+      font-size: 30px;
     }
     .hero {
       h1 {
@@ -358,7 +366,9 @@ const Container = styled.div`
   @media screen and (max-width: 1025px) {
     .galHead {
       font-size: 34px;
-      margin-left: 40%;
+    }
+    .marqHead {
+      font-size: 34px;
     }
 
     .hero {
