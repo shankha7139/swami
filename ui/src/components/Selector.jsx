@@ -301,6 +301,9 @@ const Container = styled.div`
     .buttons {
       overflow-y: auto;
     }
+    .disp {
+      flex-direction: column;
+    }
     .right {
       img {
         display: none;
@@ -312,9 +315,9 @@ const Container = styled.div`
       .left {
         padding: 0;
         margin: 0;
+        width: 100%;
         h1 {
           font-size: 36px;
-          color: red;
         }
         p {
           width: 100%;
@@ -323,3 +326,4 @@ const Container = styled.div`
     }
   }
 `;
+//

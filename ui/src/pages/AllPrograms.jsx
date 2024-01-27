@@ -268,11 +268,14 @@ const Container = styled.div`
   .disp2 {
     padding-top: 3%;
     h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: #bedcd5;
       font-size: 40px;
       color: #fff;
       padding: 2%;
-      padding-left: 27%;
+      /* padding-left: 27%; */
       font-weight: bolder;
     }
     h2 {
@@ -284,6 +287,30 @@ const Container = styled.div`
     p {
       padding: 1% 10%;
       font-size: 22px;
+    }
+  }
+  @media screen and (max-width: 481px) {
+    .banner {
+      .content {
+        font-size: 14px;
+        top: 45%;
+        left: 15%;
+      }
+    }
+    .disp {
+      font-size: 18px;
+    }
+    .disp2 {
+      h1 {
+        font-size: 20px;
+        padding-left: 10%;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 18px;
+      }
     }
   }
 `;

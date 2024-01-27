@@ -130,4 +130,16 @@ const Container = styled.div`
     padding: 1% 10%;
     font-size: 22px;
   }
+  @media screen and (max-width: 481px) {
+    .banner {
+      .content {
+        font-size: 14px;
+        top: 45%;
+        left: 35%;
+      }
+    }
+    .disp {
+      font-size: 18px;
+    }
+  }
 `;

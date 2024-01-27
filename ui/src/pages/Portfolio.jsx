@@ -9,6 +9,7 @@ import { Footer } from "../components/Footer";
 import Membership from "../components/Membership";
 import Awards from "../components/Awards";
 import Projects from "../components/Projects";
+import NewMem from "../components/NewMem";
 
 export default function Portfolio() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,8 +21,7 @@ export default function Portfolio() {
   return (
     <Container>
       <NewNavbar isScrolled={isScrolled} />
-      <img className="Banner-img" src={banner} alt="" />
-      <Marquee />
+      {/* <img className="Banner-img" src={banner} alt="" /> */}
       <div className="hero">
         <div className="left">
           <h1>Acharya Ashutosh Kumar</h1>
@@ -46,7 +46,8 @@ export default function Portfolio() {
           </span>
         </div>
       </div>
-      <Membership />
+      <Marquee />
+      <NewMem />
       <Projects />
       <Awards />
       <Footer />
@@ -61,7 +62,6 @@ const Container = styled.div`
     width: 100%;
   }
   .hero {
-    margin-top: 6%;
     display: flex;
     flex: 50%;
     padding: 2px 150px;
@@ -71,6 +71,7 @@ const Container = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding-top: 8%;
       h1 {
         color: #02a66e;
         font-size: 50px;
@@ -83,7 +84,7 @@ const Container = styled.div`
     }
     .right {
       padding: 0px 80px;
-      padding-top: 80px;
+      padding-top: 15%;
       width: 100%;
       h2 {
         font-size: 48px;
@@ -148,6 +149,7 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       .left {
+        padding-top: 20%;
         h1 {
           font-size: 32px;
         }
@@ -159,6 +161,24 @@ const Container = styled.div`
           .decor {
             font-size: 18px;
           }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .hero {
+      .left {
+        h1 {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 380px) {
+    .hero {
+      .left {
+        h1 {
+          font-size: 24px;
         }
       }
     }

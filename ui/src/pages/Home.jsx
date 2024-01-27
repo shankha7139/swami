@@ -40,7 +40,7 @@ export default function Home() {
               Minister, he leads transformative journeys.
             </p>
             <button
-              className="butt-click"
+              className="port-butt"
               onClick={() => {
                 navigate("/portfolio");
               }}
@@ -108,19 +108,20 @@ export default function Home() {
 }
 
 const Container = styled.div`
-  /* background-color: red; */
   .vedic-wellness-center {
     padding: 3px 120px 30px 120px;
     .disp {
       display: flex;
       gap: 60px;
       .left {
+        font-family: Helvetica;
         h1 {
           font-size: 80px;
           font-weight: 400;
           color: #6ad2aa;
           padding: 0;
           margin: 0;
+          font-family: Helvetica;
         }
         h2 {
           font-size: 32px;
@@ -138,6 +139,7 @@ const Container = styled.div`
         p {
           font-size: 24px;
           font-weight: 400;
+          font-family: Helvetica;
         }
       }
     }
@@ -154,7 +156,9 @@ const Container = styled.div`
       display: flex;
       gap: 60px;
       .right {
+        font-family: Helvetica;
         h1 {
+          font-family: Helvetica;
           font-size: 80px;
           font-weight: 400;
           color: #6ad2aa;
@@ -162,6 +166,7 @@ const Container = styled.div`
           margin: 0;
         }
         h2 {
+          font-family: Helvetica;
           font-size: 32px;
           font-weight: 400;
           color: #16cf90;
@@ -169,12 +174,14 @@ const Container = styled.div`
           margin: 0;
         }
         h3 {
+          font-family: Helvetica;
           font-size: 20px;
           font-weight: 400;
           padding: 0;
           margin: 0;
         }
         p {
+          font-family: Helvetica;
           font-size: 24px;
           font-weight: 400;
         }
@@ -183,6 +190,7 @@ const Container = styled.div`
           color: #007d52;
           font-size: 32px;
           font-weight: 400;
+          font-family: Helvetica;
         }
       }
     }
@@ -193,8 +201,18 @@ const Container = styled.div`
       border-radius: 10px;
     }
   }
-  .butt-click {
+  .butt-click,
+  .port-butt {
     padding: 12px 45px 12px 45px;
+  }
+  .port-butt {
+    transition: all ease-in-out 0.25s;
+  }
+  .port-butt:hover,
+  .port-butt:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    background: rgb(2, 166, 110, 0.6);
   }
   .hero {
     width: 100%;
@@ -217,7 +235,6 @@ const Container = styled.div`
       position: absolute;
       top: 20%;
       left: 20%;
-
       h2 {
         font-size: 96px;
         margin: 0;
@@ -273,6 +290,8 @@ const Container = styled.div`
       padding: 0;
       flex-direction: column;
       .disp-left {
+        padding: 0 !important;
+        margin: 0 !important;
         .image-blob {
           img {
             width: 70%;
@@ -280,6 +299,7 @@ const Container = styled.div`
           }
         }
         .content {
+          left: 14%;
           h2 {
             font-size: 34px;
           }
@@ -301,21 +321,17 @@ const Container = styled.div`
     .vedic-wellness-center,
     .rupantran-yatra {
       .disp {
-        margin: 0;
-        padding: 0;
         flex-direction: column;
       }
     }
 
     .vedic-wellness-center {
-      margin: 0px 40px 0px 40px;
-      padding: 0;
+      margin-top: 45% !important ;
       .disp {
-        margin: 0;
-        padding: 0;
         .left {
           padding: 0;
           margin: 0;
+          padding-top: 10%;
           h1 {
             font-size: 56px;
           }

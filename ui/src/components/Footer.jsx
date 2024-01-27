@@ -32,7 +32,7 @@ export const Footer = () => {
             <img src={twit} alt="" />
           </div>
           <div className="copyright">
-            <span>Copyrights reserved &copy; Pahad Programmers</span>
+            <span>Copyrights reserved &copy; Floxus</span>
           </div>
         </div>
         <div className="right">
@@ -48,6 +48,7 @@ const Container = styled.div`
   background-color: #02a66e;
   font-family: Helvetica;
   color: #fff;
+  margin-top: 2%;
   .badge {
     padding-top: 20px;
     padding-bottom: 5px;

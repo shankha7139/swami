@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import card from "../assets/projects/card1.png";
-import card2 from "../assets/projects/card2.png";
-import card3 from "../assets/projects/card3.png";
-import card4 from "../assets/projects/card4.jpg";
-import { useNavigate } from "react-router-dom";
+import card from "../assets/membership/card1.png";
+import card2 from "../assets/membership/card2.png";
+import card3 from "../assets/membership/card3.png";
+import card4 from "../assets/membership/card4.png";
+import card5 from "../assets/membership/card5.png";
+import card6 from "../assets/membership/card6.png";
 
 export default function () {
-  const navigate = useNavigate();
   return (
     <Container>
       <div className="heading">
-        <h1>Projects and Programs</h1>
+        <h1>Associations and membership</h1>
       </div>
       <section class="cards">
         <div class="card">
@@ -19,9 +19,10 @@ export default function () {
             <img src={card} />
           </div>
           <div class="card__content">
+            <p class="card__title text--medium">Founder And Secretry</p>
             <div class="card__info">
               <p class="text--medium">
-                International Day of Yoga 2018 Inaugural in Tihar jail No.5
+                Panchwati YogaShram and Nature cure Center
               </p>
             </div>
           </div>
@@ -31,9 +32,11 @@ export default function () {
             <img src={card2} />
           </div>
           <div class="card__content">
+            <p class="card__title text--medium">Yoga Consultant</p>
             <div class="card__info">
               <p class="text--medium">
-                Celebrate World Health Day in Tihar jail no.5 2018
+                Bennett, Coleman & Co Ltd, The Times of India Group, Delhi;
+                2008-09
               </p>
             </div>
           </div>
@@ -43,21 +46,38 @@ export default function () {
             <img src={card3} />
           </div>
           <div class="card__content">
+            <p class="card__title text--medium">General Secretary</p>
             <div class="card__info">
               <p class="text--medium">
-                Permission for welfasre Activities at Central Jail No.14 Mandoli
-                2018
+                Akhil Bhartiya Sanatan Dharma Mahasabha, Delhi State
               </p>
             </div>
           </div>
         </div>
-        <div class="card" onClick={() => navigate("/allprogs")}>
+        <div class="card">
           <div class="card__image-container">
             <img src={card4} />
           </div>
           <div class="card__content">
+            <p class="card__title text--medium">Impaneled Yoga Teacher</p>
             <div class="card__info">
-              <p class="text--medium">All Projects and Programs... </p>
+              <p class="text--medium">Sita World Travel (Cyoni Travels).</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__image-container">
+            <img src={card5} />
+          </div>
+          <div class="card__content">
+            <p class="card__title text--medium">
+              Yoga Consultant of various foreign embassies
+            </p>
+            <div class="card__info">
+              <p class="text--medium">
+                Italian, Egypt, Czechoslovakia, Argentina, Pakistan, France,
+                Germany, USA, Canada.
+              </p>
             </div>
           </div>
         </div>
@@ -96,11 +116,11 @@ const Container = styled.div`
   }
 
   .cards {
-    grid-column: 1 / span 19;
+    grid-column: 1 / span 24;
     display: grid;
-    grid-template-columns: repeat(19, minmax(auto, 60px));
+    grid-template-columns: repeat(24, minmax(auto, 40px));
     grid-gap: 25px;
-    margin-left: 13%;
+    margin-left: 12%;
     margin-top: 1.5%;
   }
 
@@ -111,7 +131,6 @@ const Container = styled.div`
     background-color: #39393b;
     transition: all 0.3s ease 0s;
     border-radius: 10px;
-    overflow: hidden;
   }
 
   .card__image-container {
@@ -121,14 +140,12 @@ const Container = styled.div`
     position: relative;
   }
 
-  .card__image-container {
-    img {
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+  .card__image-container img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .card__content {

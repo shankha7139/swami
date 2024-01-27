@@ -27,9 +27,6 @@ export default function AllPrograms() {
   return (
     <Container>
       <NewNavbar isScrolled={isScrolled} />
-      <div className="start-banner">
-        <img src={start} alt="" />
-      </div>
       <div className="hero">
         <h1>RUPANTRAN YATRA</h1>
         <p>
@@ -184,6 +181,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     padding: 2% 10%;
+    padding-top: 8%;
     h1 {
       font-size: 45px;
       color: #02a66e;
