@@ -16,13 +16,7 @@ export default function NewNavbar({ isScrolled }) {
         <div className="container" onClick={() => navigate("/")}>
           <img className="logo" src={logo} alt="" />
           <ul className={mobile ? "nav-links-mobile" : "nav-links"}>
-            <li
-              onClick={() => {
-                navigate("/courses");
-              }}
-            >
-              Courses
-            </li>
+            <li onClick={() => navigate("/courses")}>Courses</li>
             <li
               onClick={() => {
                 navigate("/treatment");

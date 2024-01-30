@@ -6,6 +6,7 @@ import Portfolio from "./pages/Portfolio";
 import RupantranYatra from "./pages/RupantranYatra";
 import AllPrograms from "./pages/AllPrograms";
 import AllAwards from "./pages/AllAwards";
+import Courses from "./pages/Courses";
 
 export default function () {
   return (
@@ -17,6 +18,7 @@ export default function () {
         <Route path="/rupantranyatra" element={<RupantranYatra />} />
         <Route path="/allawards" element={<AllAwards />} />
         <Route path="/allprogs" element={<AllPrograms />} />
+        <Route path="/courses" element={<Courses />} />
       </Routes>
     </BrowserRouter>
   );
