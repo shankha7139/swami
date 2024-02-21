@@ -11,7 +11,7 @@ ul{
     list-style: none;
     gap: 5px;
 }
-li{
+a{
     text-decoration: none;
 }
 
@@ -31,7 +31,7 @@ li{
     justify-content: space-between;
     align-items: center;
 }
-.nav-links li {
+.nav-links a {
     color: black;
     font-size: 20px;
     padding: 0 10px;
@@ -65,7 +65,7 @@ li{
         background-color: #fff;
 
     }
-    ul li{
+    ul a{
         padding: 32px;
         width: 100%;
         transition: all 0.5 ease-in-out;

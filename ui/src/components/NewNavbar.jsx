@@ -13,38 +13,43 @@ export default function NewNavbar({ isScrolled }) {
   return (
     <Container>
       <nav className={`${isScrolled ? "scrolled" : ""} navbar`}>
-        <div className="container" onClick={() => navigate("/")}>
-          <img className="logo" src={logo} alt="" />
+        <div className="container">
+          <img
+            className="logo"
+            src={logo}
+            alt=""
+            onClick={() => navigate("/")}
+          />
           <ul className={mobile ? "nav-links-mobile" : "nav-links"}>
-            <li onClick={() => navigate("/courses")}>Courses</li>
-            <li
+            <a onClick={() => navigate("/courses")}>Courses</a>
+            <a
               onClick={() => {
                 navigate("/treatment");
               }}
             >
               Treatment
-            </li>
-            <li
+            </a>
+            <a
               onClick={() => {
                 navigate("/diesease");
               }}
             >
               Diseases
-            </li>
-            <li
+            </a>
+            <a
               onClick={() => {
                 navigate("/yogadhara");
               }}
             >
               Yoga Dhara
-            </li>
-            <li
+            </a>
+            <a
               onClick={() => {
                 navigate("/");
               }}
             >
               About Us
-            </li>
+            </a>
             <Modal />
           </ul>
           <button
@@ -87,7 +92,7 @@ const Container = styled.div`
     background-color: #fff;
     z-index: 10;
   }
-  li {
+  a {
     font-weight: 300;
     margin: 0 5px;
     &:hover {
