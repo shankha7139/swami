@@ -60,6 +60,7 @@ const Container = styled.div`
         font-size: 72px;
         font-weight: 500;
         padding: 0.2% 1.8%;
+        padding-top: 8%;
       }
       h2 {
         font-size: 32px;
@@ -96,6 +97,26 @@ const Container = styled.div`
     }
     .right {
       width: 80%;
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 481px) {
+    .hero {
+      flex-direction: column;
+      .left {
+        padding-top: 8%;
+        width: 100%;
+        h1 {
+          font-size: 48px;
+          color: black;
+        }
+        h2 {
+          font-size: 24px;
+        }
+      }
     }
   }
 `;
