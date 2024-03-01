@@ -92,7 +92,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 1.5%;
-    padding: 0% 0.5%;
+    padding: 3% 0% 2% 0%;
     /* background: #ebf4f1; */
     h1 {
       font-size: 45px;

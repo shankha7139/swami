@@ -70,7 +70,7 @@ const Container = styled.div`
   padding: 2% 10%;
   .heading {
     margin-left: 33%;
-    padding: 2% 0%;
+    padding: 5% 0%;
     color: #02a66e;
     font-size: 90px;
     font-weight: 400;
@@ -95,14 +95,13 @@ const Container = styled.div`
       align-items: center;
       padding: 1%;
       color: #fff;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       h1 {
         font-weight: 400;
+        padding: 1% 0%;
       }
       p {
-        padding: 2.5% 5%;
+        padding: 0% 5% 2.5% 5%;
       }
       img {
         width: 90%;
@@ -116,9 +115,8 @@ const Container = styled.div`
       flex-direction: column;
       justify-content: space-between;
       /* align-items: center; */
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transition: all 0.3s ease-in-out;
       h1 {
         font-size: 30px;
         font-weight: 400;
@@ -126,6 +124,10 @@ const Container = styled.div`
       }
       .check {
         margin-right: 5px;
+      }
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
       }
     }
     .right {
@@ -136,10 +138,8 @@ const Container = styled.div`
       justify-content: space-between;
       /* align-items: center; */
       padding: 1.5% 3%;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transition: all 0.3s ease-in-out;
       h1 {
         font-size: 30px;
         font-weight: 400;
@@ -147,6 +147,10 @@ const Container = styled.div`
       }
       .check {
         margin-right: 5px;
+      }
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
       }
     }
   }

@@ -7,18 +7,25 @@ import RupantranYatra from "./pages/RupantranYatra";
 import AllPrograms from "./pages/AllPrograms";
 import AllAwards from "./pages/AllAwards";
 import Courses from "./pages/Courses";
+import Error from "./pages/Error";
+import CommingSoon from "./pages/CommingSoon";
+import Course2 from "./pages/Course2";
 
 export default function () {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/disease" element={<Disease />} />
+        <Route path="/disease" element={<CommingSoon />} />
+        <Route path="/yogadhara" element={<CommingSoon />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/rupantranyatra" element={<RupantranYatra />} />
         <Route path="/allawards" element={<AllAwards />} />
         <Route path="/allprogs" element={<AllPrograms />} />
-        <Route path="/courses" element={<Courses />} />
+        <Route path="/course1" element={<Courses />} />
+        <Route path="/course2" element={<Course2 />} />
+        <Route path="/treatment*" element={<CommingSoon />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

@@ -5,6 +5,7 @@ import card2 from "../assets/projects/card2.png";
 import card3 from "../assets/projects/card3.png";
 import card4 from "../assets/projects/card4.jpg";
 import { useNavigate } from "react-router-dom";
+import { FaAngleRight } from "react-icons/fa";
 
 export default function () {
   const navigate = useNavigate();
@@ -51,17 +52,26 @@ export default function () {
             </div>
           </div>
         </div>
-        <div class="card" onClick={() => navigate("/allprogs")}>
+        <div class="card">
           <div class="card__image-container">
             <img src={card4} />
           </div>
           <div class="card__content">
             <div class="card__info">
-              <p class="text--medium">All Projects and Programs... </p>
+              <p class="text--medium">
+                {" "}
+                World Health Day celebration for the inmates of Mandoli Jail{" "}
+              </p>
             </div>
           </div>
         </div>
       </section>
+      <a href="" onClick={() => navigate("/allprogs")}>
+        <div className="left">
+          See all Projects
+          <FaAngleRight />
+        </div>
+      </a>
     </Container>
   );
 }
@@ -72,7 +82,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 1.5%;
-    padding: 0% 0.5%;
+    padding: 3% 0% 2% 0%;
     /* background: #ebf4f1; */
     h1 {
       font-size: 45px;
@@ -150,6 +160,26 @@ const Container = styled.div`
     padding: 5px 20px;
     background-color: #303032;
     border-radius: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: #007d52;
+    font-size: 32px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0% 0% 0%;
+    /* margin: 3% 0%; */
+    .left {
+      font-family: Helvetica;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   @media only screen and (max-width: 1000px) {

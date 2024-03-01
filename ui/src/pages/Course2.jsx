@@ -17,7 +17,7 @@ export default function Courses() {
     <Container>
       <NewNavbar isScrolled={isScrolled} />
       <HeroCourse />
-      <h1>COURSE1</h1>
+      <h1>COURSE2</h1>
       <CourssSelect />
       <Footer />
     </Container>

@@ -5,6 +5,7 @@ import card2 from "../assets/award/card2.png";
 import card3 from "../assets/award/card3.png";
 import card4 from "../assets/award/card4.png";
 import { useNavigate } from "react-router-dom";
+import { FaAngleRight } from "react-icons/fa";
 
 export default function () {
   const navigate = useNavigate();
@@ -57,17 +58,27 @@ export default function () {
             </div>
           </div>
         </div>
-        <div class="card" onClick={() => navigate("/allawards")}>
+        <div class="card">
           <div class="card__image-container">
             <img src={card4} />
           </div>
           <div class="card__content">
             <div class="card__info">
-              <p class="text--medium">All Awards... </p>
+              <p class="card__title text--medium">
+                Honored by HEART CARE FOUNDATION OF INDIA in contribution of
+                lots of Yoga, spiritual and holistic therapies activities
+              </p>
+              <p class="text--medium">2002</p>
             </div>
           </div>
         </div>
       </section>
+      <a href="" onClick={() => navigate("/allawards")}>
+        <div className="left">
+          See all Awards
+          <FaAngleRight />
+        </div>
+      </a>
     </Container>
   );
 }
@@ -78,7 +89,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 1.5%;
-    padding: 0% 0.5%;
+    padding: 3% 0% 2% 0%;
     /* background: #ebf4f1; */
     h1 {
       font-size: 45px;
@@ -122,7 +133,7 @@ const Container = styled.div`
 
   .card__image-container {
     width: 100%;
-    padding-top: 56.25%;
+    padding-top: 76.25%;
     overflow: hidden;
     position: relative;
   }
@@ -148,7 +159,7 @@ const Container = styled.div`
   .card__info {
     display: flex;
     align-self: end;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
   }
 
@@ -157,6 +168,26 @@ const Container = styled.div`
     padding: 5px 20px;
     background-color: #303032;
     border-radius: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: #007d52;
+    font-size: 32px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0%;
+    /* margin: 3% 0%; */
+    .left {
+      font-family: Helvetica;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   @media only screen and (max-width: 1000px) {

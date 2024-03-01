@@ -70,6 +70,7 @@ const Container = styled.div`
     margin: 0;
     font-size: 90px;
     font-weight: 500;
+    padding: 3% 0% 3% 0%;
   }
   .decor {
     font-size: 90px;
@@ -83,6 +84,7 @@ const Container = styled.div`
     margin-bottom: 60px;
     p {
       font-size: 20px;
+      padding: 3% 0% 3% 0%;
     }
     a {
       padding-left: 440px;
@@ -131,7 +133,7 @@ const Container = styled.div`
       }
       background-color: #f4f4f4;
       border-radius: 10px;
-      transition: 0.3ms ease-in-out;
+      transition: all 0.4s ease-in-out;
     }
     button:active {
       background-color: #3bc797;

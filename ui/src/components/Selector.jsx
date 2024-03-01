@@ -173,11 +173,9 @@ const Container = styled.div`
   padding: 20px 150px 20px 150px;
   .disp {
     display: flex;
-    flex: 50%;
-    justify-content: space-between;
+    gap: 100px;
     /* gap: 200px; */
     .left {
-      width: 100%;
       /* padding-top: 60px; */
       padding-left: 10px;
       h1 {
@@ -188,18 +186,22 @@ const Container = styled.div`
         background: linear-gradient(to right, #3bc797, #8bdab8);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
+        padding-bottom: 5%;
       }
       p {
+        color: #646464;
+        font-weight: lighter;
+        line-height: 35px;
+        font-family: Helvetica;
         font-size: 21px;
       }
     }
     .right {
-      width: 100%;
+      /* width: 100%; */
       /* padding-left: 200px; */
       img {
-        width: 400px;
-        height: 400px;
-        margin-left: 200px;
+        width: 485px;
+        height: 455px;
         object-fit: cover;
         border-radius: 10px;
       }
@@ -209,6 +211,8 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 4px;
+    padding: 0.5% 0% 5% 0%;
+    transition: all 0.2s ease-in-out;
     button {
       display: flex;
       flex-direction: column;
@@ -221,7 +225,7 @@ const Container = styled.div`
       }
       background-color: #f4f4f4;
       border-radius: 10px;
-      transition: 0.3ms ease-in-out;
+      transition: all 0.4s ease-in-out;
     }
     button:active {
       background-color: #3bc797;

@@ -51,7 +51,7 @@ const Container = styled.div`
   margin-top: 2%;
   .badge {
     padding-top: 20px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +81,7 @@ const Container = styled.div`
 
       .anchors {
         display: flex;
-        gap: 120px;
+        gap: 5%;
         a {
           font-size: 20px;
           text-decoration: none;
@@ -107,38 +107,38 @@ const Container = styled.div`
       justify-content: center;
       img {
         margin-left: 120px;
+        width: 70%;
+        padding: 1% 0%;
       }
       p {
         margin-left: 108px;
       }
     }
   }
-  @media screen and (max-width: 1350px) {
+  @media screen and (max-width: 1024px) {
     .info {
       flex-direction: column;
       .left {
         h2 {
-          padding-left: 27%;
-          font-size: 20px;
+          font-size: 25px;
           align-items: center;
           justify-content: center;
+          text-align: center;
         }
         .anchors {
-          /* padding-left: 50%; */
-          padding-top: 30px;
-          flex-direction: column;
-          gap: 30px;
-          padding-bottom: 30px;
-          align-items: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          width: 60%;
+          margin: auto;
         }
         .socials {
           display: flex;
-          padding-top: 30px;
           gap: 30px;
           padding-bottom: 30px;
           align-items: center;
           justify-content: center;
-          /* padding-left: 35%; */
+          width: 50%;
+          margin: auto;
         }
         .copyright {
           display: flex;
@@ -147,26 +147,12 @@ const Container = styled.div`
         }
       }
       .right {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-        .img {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          height: 100%;
-        }
-        .p {
-          margin: 0;
-          padding: 0;
-        }
+        display: none;
       }
     }
   }
-  @media screen and (max-width: 600px) {
+
+  @media screen and (max-width: 768px) {
     .info {
       flex-direction: column;
       .left {
@@ -177,13 +163,14 @@ const Container = styled.div`
           justify-content: center;
         }
         .anchors {
-          padding-top: 30px;
-          flex-direction: column;
-          gap: 10px;
-          padding-bottom: 30px;
+          padding-top: 15px;
+          flex-direction: row;
+          padding-bottom: 15px;
+          width: 80%;
+          gap: 30px;
         }
         .socials {
-          padding-left: 20%;
+          padding-bottom: 10px;
         }
       }
       .right {
@@ -202,6 +189,26 @@ const Container = styled.div`
       }
     }
   }
+  @media screen and (max-width: 600px) {
+    .info {
+      flex-direction: column;
+      .left {
+        h2 {
+          padding-left: 0px;
+          font-size: 20px;
+          align-items: center;
+          justify-content: center;
+        }
+        .anchors {
+          flex-direction: column;
+        }
+        .socials {
+          width: 100%;
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
   @media screen and (max-width: 480px) {
     .badge {
       h1 {
@@ -212,6 +219,12 @@ const Container = styled.div`
       .left {
         h2 {
           display: none;
+        }
+        .anchors {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
       }
       .right {

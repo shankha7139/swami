@@ -92,8 +92,10 @@ export default function Home() {
               been taken.
             </p>
             <a href="" onClick={() => navigate("/rupantranyatra")}>
-              See full Program
-              <FaAngleRight />
+              <div className="left">
+                See full Program
+                <FaAngleRight />
+              </div>
             </a>
           </div>
         </div>
@@ -109,11 +111,14 @@ export default function Home() {
 }
 
 const Container = styled.div`
+  .display-section {
+    padding-top: 3%;
+  }
   .vedic-wellness-center {
-    padding: 3px 120px 30px 120px;
+    padding: 120px 120px 30px 120px;
     .disp {
       display: flex;
-      gap: 60px;
+      gap: 100px;
       .left {
         font-family: Helvetica;
         h1 {
@@ -123,39 +128,29 @@ const Container = styled.div`
           padding: 0;
           margin: 0;
           font-family: Helvetica;
-        }
-        h2 {
-          font-size: 32px;
-          font-weight: 400;
-          color: #16cf90;
-          padding: 0;
-          margin: 0;
-        }
-        h3 {
-          font-size: 20px;
-          font-weight: 400;
-          padding: 0;
-          margin: 0;
+          padding-bottom: 5%;
         }
         p {
           font-size: 24px;
-          font-weight: 400;
+          color: #646464;
+          font-weight: lighter;
+          line-height: 35px;
           font-family: Helvetica;
         }
       }
     }
     img {
-      width: 525px;
-      height: 525px;
+      width: 485px;
+      height: 455px;
       object-fit: cover;
       border-radius: 10px;
     }
   }
   .rupantran-yatra {
-    padding: 30px 120px 30px 120px;
+    padding: 120px 120px 30px 120px;
     .disp {
       display: flex;
-      gap: 60px;
+      gap: 100px;
       .right {
         font-family: Helvetica;
         h1 {
@@ -171,33 +166,46 @@ const Container = styled.div`
           font-size: 32px;
           font-weight: 400;
           color: #16cf90;
-          padding: 0;
+          padding: 1% 0%;
           margin: 0;
         }
         h3 {
           font-family: Helvetica;
           font-size: 20px;
           font-weight: 400;
-          padding: 0;
+          padding: 1.5% 0%;
           margin: 0;
         }
         p {
+          color: #646464;
+          font-weight: lighter;
+          line-height: 35px;
           font-family: Helvetica;
           font-size: 24px;
-          font-weight: 400;
+          padding: 1% 0% 3% 0%;
         }
         a {
-          text-decoration: underline;
+          text-decoration: none;
           color: #007d52;
           font-size: 32px;
           font-weight: 400;
-          font-family: Helvetica;
+
+          margin: 3% 0%;
+          .left {
+            font-family: Helvetica;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
     img {
-      width: 525px;
-      height: 525px;
+      width: 485px;
+      height: 455px;
       object-fit: cover;
       border-radius: 10px;
     }
@@ -267,7 +275,7 @@ const Container = styled.div`
   button {
     margin: 3px;
     color: #460954;
-    padding: 8px 12px 8px 12px;
+    padding: 10px 12px 10px 12px;
     text-decoration: none;
     font-size: 18px;
     font-family: Helvetica;
