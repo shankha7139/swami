@@ -36,21 +36,26 @@ const NewNavbar = ({ isScrolled }) => {
           {showMobileMenu ? <FaTimes /> : <FaBars />}
         </MenuToggle>
         <NavLinks isMobile={isMobile} showMobileMenu={showMobileMenu}>
-          <NavItem>
-            <NavDropdown>
-              <DropdownButton onClick={toggleDropdown}>Courses</DropdownButton>
-              <DropdownContent show={showDropdown}>
-                <DropdownItem onClick={() => navigate("/course1")}>
-                  Course 1
-                </DropdownItem>
-                <DropdownItem onClick={() => navigate("/course2")}>
-                  Course 2
-                </DropdownItem>
-              </DropdownContent>
-            </NavDropdown>
+          <NavItem onClick={() => navigate("/courses")}>Courses</NavItem>
+          <NavItem onClick={() => navigate("/yogadhara")}>Yoga Dhara</NavItem>
+          <NavItem onClick={() => navigate("/mediareport")}>
+            Media Report
           </NavItem>
-          <NavItem onClick={() => navigate("/yogadhara")}>Media Report</NavItem>
-          <NavItem onClick={() => navigate("/")}>About Us</NavItem>
+          <NavItem onClick={() => navigate("/about")}>About Us</NavItem>
+          <NavItem onClick={() => navigate("/rupantranyatra")}>
+            Rupayantran yatra
+          </NavItem>
+          <NavDropdown>
+            <DropdownButton onClick={toggleDropdown}>Media</DropdownButton>
+            <DropdownContent show={showDropdown}>
+              <DropdownItem onClick={() => navigate("/gallary")}>
+                Gallary
+              </DropdownItem>
+              <DropdownItem onClick={() => navigate("/news")}>
+                News
+              </DropdownItem>
+            </DropdownContent>
+          </NavDropdown>
           <NavItem>
             <Modal />
           </NavItem>
