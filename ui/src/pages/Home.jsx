@@ -323,7 +323,7 @@ const Container = styled.div`
       .disp-right {
         img {
           width: 70%;
-          margin: 0;
+          margin: auto;
         }
       }
     }
@@ -342,7 +342,7 @@ const Container = styled.div`
           margin: 0;
           padding-top: 10%;
           h1 {
-            font-size: 56px;
+            font-size: 36px !important;
           }
           p {
             font-weight: lighter;
@@ -350,10 +350,10 @@ const Container = styled.div`
         }
         .right {
           img {
-            width: 90%;
+            width: 90% !important;
             height: 90%;
-            padding: 0;
-            margin: 0;
+            padding: 0 !important ;
+            margin: 0 !important ;
           }
         }
       }
@@ -368,7 +368,7 @@ const Container = styled.div`
           padding: 0;
           margin: 0;
           h1 {
-            font-size: 56px;
+            font-size: 46px !important;
           }
           h2 {
             font-size: 26px;
@@ -555,10 +555,8 @@ const Container = styled.div`
           padding: 0;
           margin: 0;
           img {
-            width: 90%;
-            height: 90%;
-            padding: 0;
-            margin: 0;
+            width: 60%;
+            height: 50%;
           }
         }
       }

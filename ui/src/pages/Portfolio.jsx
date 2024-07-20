@@ -56,130 +56,97 @@ export default function Portfolio() {
 }
 
 const Container = styled.div`
-  .Banner-img {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
   .hero {
     display: flex;
-    flex: 50%;
-    padding: 2px 150px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    padding: 90px 0;
+
     .left {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-top: 8%;
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+
       h1 {
         color: #02a66e;
-        font-size: 50px;
-        font-weight: 400;
+        font-size: 42px;
+        font-weight: 600;
+        margin-bottom: 30px;
       }
+
       img {
-        width: 595px;
-        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
     }
+
     .right {
-      padding: 0px 80px;
-      padding-top: 15%;
-      width: 100%;
-      h2 {
-        font-size: 48px;
-        font-weight: 400;
-      }
+      flex: 1;
+      min-width: 300px;
+
       span {
-        font-size: 24px;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+
         .decor {
           color: #02a66e;
-          font-weight: bolder;
+          font-weight: 600;
           text-decoration: underline;
+          cursor: pointer;
+          transition: color 0.3s ease;
+
           &:hover {
-            cursor: pointer;
+            color: #018756;
           }
         }
       }
     }
   }
 
-  @media screen and (max-width: 1401px) {
+  @media screen and (max-width: 1200px) {
     .hero {
-      padding: 2px 30px;
-      .left {
-        h1 {
-          font-size: 32px;
-        }
+      padding: 80px 0;
+
+      .left h1 {
+        font-size: 36px;
       }
-      .right {
-        padding: 0 15px;
-        span {
-          font-size: 22px;
-          .decor {
-            font-size: 22px;
-          }
-        }
+
+      .right span {
+        font-size: 16px;
       }
     }
   }
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 768px) {
     .hero {
-      padding: 2px 30px;
-      .left {
-        h1 {
-          font-size: 32px;
-        }
-      }
-      .right {
-        padding: 0 15px;
-        span {
-          font-size: 18px;
-          .decor {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 720px) {
-    .hero {
-      padding: 2px 30px;
-      display: flex;
       flex-direction: column;
+      text-align: center;
+      padding: 70px 0;
       .left {
-        padding-top: 20%;
         h1 {
           font-size: 32px;
         }
       }
+
       .right {
-        padding: 0 15px;
-        span {
-          font-size: 18px;
-          .decor {
-            font-size: 18px;
-          }
-        }
+        padding: 0;
       }
     }
   }
-  @media screen and (max-width: 500px) {
+
+  @media screen and (max-width: 480px) {
     .hero {
-      .left {
-        h1 {
-          font-size: 28px;
-        }
+      padding: 70px 0;
+      .left h1 {
+        font-size: 28px;
       }
-    }
-  }
-  @media screen and (max-width: 380px) {
-    .hero {
-      .left {
-        h1 {
-          font-size: 24px;
-        }
+
+      .right span {
+        font-size: 14px;
       }
     }
   }

@@ -10,152 +10,156 @@ export default function Modal() {
     <Container>
       <button onClick={toggleModal}>Contact Us</button>
       {view && (
-        <div className="modal">
-          <div className="overlay">
-            <div className="modal-content">
-              <h3>Please Enter Details</h3>
-              <form action="/action_page.php">
-                <label for="fname">Name</label>
+        <ModalOverlay>
+          <ModalContent>
+            <h2>Contact Us</h2>
+            <form onSubmit={(e) => e.preventDefault()}>
+              <FormField>
+                <label htmlFor="name">Name</label>
                 <input
                   type="text"
-                  id="fname"
-                  name="firstname"
-                  placeholder="eg: Shivam Dube"
+                  id="name"
+                  name="name"
+                  placeholder="e.g., John Doe"
                 />
-
-                <label for="lname">Contact Number</label>
+              </FormField>
+              <FormField>
+                <label htmlFor="phone">Contact Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g., +1 (555) 123-4567"
+                />
+              </FormField>
+              <FormField>
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="e.g., john.doe@example.com"
+                />
+              </FormField>
+              <FormField>
+                <label htmlFor="country">Country</label>
                 <input
                   type="text"
-                  id="lname"
-                  name="lastname"
-                  placeholder="eg: xxxxx xxxxx"
+                  id="country"
+                  name="country"
+                  placeholder="e.g., United States"
                 />
-
-                <label for="lname">Email</label>
-                <input
-                  type="text"
-                  id="lname"
-                  name="lastname"
-                  placeholder="eg:shivamdub@gmail.com"
-                />
-
-                <label for="country">Country</label>
-                <input
-                  type="text"
-                  id="lname"
-                  name="lastname"
-                  placeholder="eg:India"
-                />
-              </form>
-              <button>Continue</button>
-              <button className="close-btn" onClick={toggleModal}>
-                Cancel
-              </button>
-            </div>
-          </div>
-        </div>
+              </FormField>
+              <ButtonGroup>
+                <SubmitButton type="submit">Submit</SubmitButton>
+                <CancelButton onClick={toggleModal}>Cancel</CancelButton>
+              </ButtonGroup>
+            </form>
+          </ModalContent>
+        </ModalOverlay>
       )}
     </Container>
   );
 }
 
 const Container = styled.div`
-  padding-top: 2vh;
-  z-index: 10;
-  .disp {
-    display: flex;
-    gap: 2px;
-  }
-  .close-btn {
-    background-color: #fff;
-    color: #02a66e;
-    border: 0.5px solid #02a66e;
-    &:hover {
-      background: #ccc;
-    }
-  }
-  h3 {
-    padding-left: 100px;
-    font-weight: lighter;
-  }
-  font-family: sans-serif;
-  label {
-    font-weight: lighter;
-  }
   button {
-    display: flex;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    margin: 3px;
-    color: #460954;
-    padding: 8px 12px 8px 12px;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bolder;
     background-color: #02a66e;
     color: #fff;
     border: none;
     border-radius: 4px;
-    justify-content: center;
-    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
     &:hover {
-      cursor: pointer;
-      background-color: rgb(2, 166, 110, 0.8);
+      background-color: #028656;
     }
   }
-  .modal,
-  .overlay {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
+`;
+
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`;
+
+const ModalContent = styled.div`
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+`;
+
+const FormField = styled.div`
+  margin-bottom: 1rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
   }
 
-  .overlay {
-    background: rgba(49, 49, 49, 0.8);
-    z-index: 10;
-  }
-  .modal-content {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 1.4;
-    background: #fff;
-    padding: 14px 28px;
-    border-radius: 10px;
-    max-width: 400px;
-    min-width: 300px;
-    z-index: 15;
-  }
-  input[type="text"],
-  select,
-  textarea {
+  input {
     width: 100%;
-    padding: 12px;
-    border: 0.5px solid #ccc;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
+    font-size: 16px;
 
-  input[type="submit"] {
-    background-color: #04aa6d;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    &:focus {
+      outline: none;
+      border-color: #02a66e;
+    }
   }
+`;
 
-  input[type="submit"]:hover {
-    background-color: #45a049;
+const ButtonGroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+`;
+
+const Button = styled.button`
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+`;
+
+const SubmitButton = styled(Button)`
+  background-color: #02a66e;
+  color: #fff;
+
+  &:hover {
+    background-color: #028656;
+  }
+`;
+
+const CancelButton = styled(Button)`
+  background-color: #f1f1f1;
+  color: #333;
+
+  &:hover {
+    background-color: #e1e1e1;
   }
 `;

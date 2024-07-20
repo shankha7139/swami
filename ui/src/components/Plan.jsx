@@ -156,8 +156,8 @@ const Container = styled.div`
   }
   @media screen and (max-width: 481px) {
     .heading {
-      font-size: 40px;
-      margin-left: 28%;
+      font-size: 40px !important;
+      margin: auto !important ;
     }
     h1 {
       font-size: 26px;

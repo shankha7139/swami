@@ -10,6 +10,7 @@ import Courses from "./pages/Courses";
 import Error from "./pages/Error";
 import CommingSoon from "./pages/CommingSoon";
 import Course2 from "./pages/Course2";
+import MediaReport from "./pages/MediaReport";
 
 export default function () {
   return (
@@ -17,7 +18,7 @@ export default function () {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/disease" element={<CommingSoon />} />
-        <Route path="/yogadhara" element={<CommingSoon />} />
+        <Route path="/yogadhara" element={<MediaReport />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/rupantranyatra" element={<RupantranYatra />} />
         <Route path="/allawards" element={<AllAwards />} />

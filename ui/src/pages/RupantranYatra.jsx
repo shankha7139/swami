@@ -50,11 +50,68 @@ export default function AllPrograms() {
           <div>
             <p>
               <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus dignissimos aspernatur ducimus tempora expedita, illo
-              repellat beatae? Praesentium blanditiis perferendis consequatur,
-              aliquam consequuntur, ad, asperiores possimus quasi illo dolores
-              id!
+              Rupantaran Yatra: A Holistic Prison Reform Initiative "Rupantaran
+              Yatra," an initiative in the field of prison reform, was pioneered
+              by Acharya ji, who crafted a 14-day comprehensive reformation
+              program for jail inmates, centered around Vedic spiritual
+              practices. This program aimed to bring about a profound
+              transformation in the lives of inmates by addressing their core
+              consciousness and spiritual well-being. Concept and Objectives
+              Acharya Ji's vision was to utilize the ancient wisdom of Vedic
+              spirituality to reform, reintegrate and rehabilitate the jail
+              inmates, helping them break free from the psychological and
+              emotional chains of their past. The core objective was to
+              facilitate a deep, internal transformation that would pave the way
+              for a more positive and reformed future. Program Design The
+              program was meticulously designed to span 14 days, from September
+              21 to October 4, 2016. A group of 18 inmates, all convicted for
+              heinous crimes and serving their sentences in Tihar prison, were
+              carefully selected for this unique journey. The selection was
+              based on their willingness to participate and their perceived
+              readiness for change. The Journey to Haridwar The inmates were
+              taken on a spiritual journey to Haridwar, a city renowned for its
+              religious significance and spiritual ambiance. What made this
+              journey remarkable was the decision to allow these inmates to
+              travel without any police or jail staff accompanying them,
+              signifying a bold leap of faith in the transformative power of
+              spirituality and trust in the process. Activities and Practices
+              Upon arrival in Haridwar, the inmates adopted a Gurukul lifestyle,
+              living in an environment reminiscent of ancient Indian education
+              systems that emphasized holistic development. The daily schedule
+              included: Yoga Classes: Regular yoga sessions aimed at improving
+              physical health, mental clarity, and emotional balance. These
+              sessions were tailored to the needs of the inmates, focusing on
+              stress relief, enhancing concentration, and promoting overall
+              well-being. Religious Rituals: The inmates participated in various
+              religious rituals, including the Upanayan Sanskar, a traditional
+              Vedic ceremony symbolizing the initiation into spiritual
+              knowledge. These rituals were designed to instill a sense of
+              discipline, devotion, and respect for spiritual values. Satsang:
+              Regular gatherings for spiritual discourse and singing of
+              devotional songs. Satsang sessions created a sense of community,
+              offering emotional support and fostering a collective spirit of
+              transformation. Discourses on Vedic Wisdom: Acharya ji delivered
+              discourses on Vedic wisdom, providing insights into ancient
+              spiritual teachings and their relevance to modern life. These
+              discourses aimed to help inmates confront and overcome the traumas
+              of their past, facilitating emotional healing and personal growth.
+              Impact and Significance The "Rupantaran Yatra" was groundbreaking,
+              marking the first time in history that such a spiritual journey
+              was undertaken for convicted inmates. The program's holistic
+              approach aimed to create a lasting impact on the consciousness of
+              the participants, encouraging them to embrace positive change and
+              rehabilitation. The absence of police or jail staff during the
+              journey underscored the program's unique nature, highlighting a
+              deep trust in the inmates' commitment to their transformation.
+              This aspect also aimed to reinforce the inmates' sense of
+              responsibility and self-worth, essential elements for their
+              successful reintegration into society. In summary, "Rupantaran
+              Yatra" stands as a pioneering model in prison reform,
+              demonstrating the profound potential of Vedic spiritual practices
+              in fostering deep, meaningful change in the lives of inmates.
+              Through a blend of yoga, religious rituals, satsang, and Vedic
+              wisdom, the program sought to heal and uplift, offering a path to
+              redemption and a renewed sense of purpose.
             </p>
             <button className="lessbtn" onClick={() => setSee(!see)}>
               Show Less..
@@ -129,7 +186,7 @@ export default function AllPrograms() {
               src={yt1}
               alt=""
             />
-            <p className="hoverPara">Video 1</p>
+            <p className="hoverPara">Virtual Journey</p>
           </div>
           <div className="right">
             <img
@@ -141,7 +198,7 @@ export default function AllPrograms() {
               src={yt2}
               alt=""
             />
-            <p className="hoverPara">Video 2</p>
+            <p className="hoverPara">Get Enlightened by our Program</p>
           </div>
         </div>
       </div>
@@ -154,244 +211,296 @@ export default function AllPrograms() {
 }
 
 const Container = styled.div`
-  .galHead {
-    font-size: 40px;
-    font-weight: 500;
-    color: #02a66e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .marqHead {
-    font-size: 40px;
-    font-weight: 500;
-    color: #02a66e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1%;
-  }
-  .end-banner {
-    img {
-      height: 70%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-  .start-banner {
-    padding-top: 10vh;
-    img {
-      height: 80%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
+  width: 100%;
+  overflow-x: hidden;
+
   .hero {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 2% 10%;
-    padding-top: 8%;
+    padding: 8% 5% 5%;
+    background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
     h1 {
-      font-size: 45px;
+      font-size: 4.5rem;
       color: #02a66e;
-      font-weight: 500;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      color: #333;
+      width: 80%;
+      max-width: 1200px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
     button {
-      margin: 5% 0%;
-      padding: 10px 20px;
-      font-size: 28px;
-      border-radius: 10px;
+      padding: 15px 40px;
+      font-size: 1.5rem;
+      border-radius: 50px;
       border: none;
-      background: #02a66e;
+      background: linear-gradient(45deg, #02a66e, #00c78e);
       color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(2, 166, 110, 0.3);
+
       &:hover {
-        cursor: pointer;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(2, 166, 110, 0.4);
       }
     }
-    p {
-      font-size: 30px;
-    }
+
     .lessbtn {
-      margin-left: 42%;
+      margin-top: 1rem;
     }
   }
+
+  .galHead,
+  .marqHead {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #02a66e;
+    text-align: center;
+    margin: 4rem 0 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
   .gallery {
     display: flex;
-    width: 100%;
-    gap: 10px;
-    overflow: hidden;
     justify-content: center;
-    /* margin-left: 15%; */
+    gap: 20px;
+    padding: 0 2%;
+    overflow-x: auto;
+
     img {
-      /* width: 10%; */
       height: 60vh;
-      width: 7%;
+      min-width: 300px;
       object-fit: cover;
       border-radius: 20px;
-      transition: all ease 0.5s;
+      transition: all 0.5s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
       &:hover {
-        width: 100%;
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       }
     }
   }
+
   .marq {
     background: #ebf4f1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5% 0%;
+    padding: 4rem 0;
+    margin: 4rem 0;
+
     .marquee {
       img {
-        margin-left: 100px;
-        padding: 5% 6%;
-        width: 90%;
+        height: 150px;
+        margin: 0 50px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
         &:hover {
-          cursor: pointer;
+          transform: scale(1.1);
         }
       }
     }
   }
+
   .youtube {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2% 0%;
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+
     h2 {
-      font-size: 50px;
-      font-weight: 400;
+      font-size: 3.5rem;
+      font-weight: 600;
       color: #02a66e;
+      margin-bottom: 3rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
+
     .tabs {
       display: flex;
       justify-content: center;
-      align-items: center;
-      padding-left: 10%;
+      gap: 50px;
+      padding: 0 5%;
+
       .left,
       .right {
         position: relative;
+        width: 45%;
+        max-width: 800px;
+
         img {
-          width: 80%;
-          border-radius: 12px;
-          transition: all ease-in-out 0.8s;
+          width: 100%;
+          border-radius: 20px;
+          transition: all 0.5s ease;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
           &:hover {
-            -webkit-mask-image: linear-gradient(black, transparent);
-            mask-image: linear-gradient(black, transparent);
-            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           }
         }
+
         p {
           position: absolute;
           bottom: 10%;
-          right: 52%;
-          font-size: 20px;
-          display: none;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 1.5rem;
+          color: #fff;
+          background: rgba(2, 166, 110, 0.8);
+          padding: 15px 30px;
+          border-radius: 50px;
+          opacity: 0;
+          transition: all 0.3s ease;
         }
-        &:hover .hoverPara {
-          font-size: 24px;
-          font-weight: 400;
-          color: #02a66e;
-          display: block;
+
+        &:hover p {
+          opacity: 1;
+          bottom: 15%;
         }
       }
     }
   }
-  @media screen and (max-width: 481px) {
-    .galHead {
-      font-size: 24px;
+
+  .end-banner {
+    margin-top: 4rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
-    .marqHead {
-      font-size: 24px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    .hero {
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
     }
 
-    .hero {
-      padding-top: 20%;
-      h1 {
-        font-size: 24px;
-      }
-      p {
-        font-size: 18px;
-      }
-      button {
-        font-size: 18px;
-      }
-    }
-    .marq {
-      h1 {
-        font-size: 24px;
-        padding-left: 32%;
-      }
-    }
-    .youtube {
-      h2 {
-        font-size: 24px;
-        font-weight: 300;
-      }
+    .galHead,
+    .marqHead,
+    .youtube h2 {
+      font-size: 3rem;
     }
   }
-  @media screen and (max-width: 750px) {
-    .galHead {
-      font-size: 30px;
-    }
-    .marqHead {
-      font-size: 30px;
-    }
+
+  @media screen and (max-width: 1024px) {
     .hero {
       h1 {
-        font-size: 30px;
+        font-size: 3.5rem;
       }
       p {
-        font-size: 22px;
+        font-size: 1.3rem;
       }
       button {
-        font-size: 22px;
+        font-size: 1.3rem;
       }
-    }
-    .marq {
-      h1 {
-        font-size: 30px;
-        padding-left: 36%;
-      }
-    }
-    .youtube {
-      h2 {
-        font-size: 30px;
-        font-weight: 300;
-      }
-    }
-  }
-  @media screen and (max-width: 1025px) {
-    .galHead {
-      font-size: 34px;
-    }
-    .marqHead {
-      font-size: 34px;
     }
 
+    .galHead,
+    .marqHead,
+    .youtube h2 {
+      font-size: 2.8rem;
+    }
+
+    .gallery img {
+      min-width: 250px;
+    }
+
+    .youtube .tabs {
+      flex-direction: column;
+      align-items: center;
+    }
+    .youtube .tabs .left,
+    .youtube .tabs .right {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
     .hero {
       h1 {
-        font-size: 34px;
+        font-size: 3rem;
       }
       p {
-        font-size: 26px;
+        font-size: 1.2rem;
+        width: 90%;
       }
       button {
-        font-size: 26px;
+        font-size: 1.2rem;
+        padding: 12px 30px;
       }
     }
-    .marq {
+
+    .galHead,
+    .marqHead,
+    .youtube h2 {
+      font-size: 2.5rem;
+    }
+
+    .gallery img {
+      min-width: 200px;
+      height: 50vh;
+    }
+
+    .marq .marquee img {
+      height: 120px;
+      margin: 0 30px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .hero {
       h1 {
-        font-size: 34px;
-        padding-left: 35%;
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      button {
+        font-size: 1.1rem;
+        padding: 10px 25px;
       }
     }
-    .youtube {
-      h2 {
-        font-size: 34px;
-        font-weight: 400;
+
+    .galHead,
+    .marqHead,
+    .youtube h2 {
+      font-size: 2.2rem;
+    }
+
+    .gallery img {
+      min-width: 150px;
+      height: 40vh;
+    }
+
+    .marq .marquee img {
+      height: 100px;
+      margin: 0 20px;
+    }
+
+    .youtube .tabs .left,
+    .youtube .tabs .right {
+      width: 90%;
+      p {
+        font-size: 1.2rem;
+        padding: 10px 20px;
       }
     }
   }

@@ -84,68 +84,59 @@ export default function () {
 }
 
 const Container = styled.div`
+  background-color: #f5f5f5;
+  padding: 40px 0;
+
   .heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5%;
-    padding: 3% 0% 2% 0%;
-    /* background: #ebf4f1; */
+    text-align: center;
+    margin-bottom: 40px;
+
     h1 {
-      font-size: 45px;
-      font-weight: 400;
+      font-size: 42px;
+      font-weight: 600;
       color: #02a66e;
     }
   }
-  main {
-    display: grid;
-    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
-    grid-gap: 40px;
-    padding: 60px 0;
-  }
-
-  .text--medium {
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #ecf0f1;
-  }
 
   .cards {
-    grid-column: 1 / span 19;
     display: grid;
-    grid-template-columns: repeat(19, minmax(auto, 60px));
-    grid-gap: 25px;
-    margin-left: 13%;
-    margin-top: 1.5%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 5%;
   }
 
   .card {
-    grid-column-end: span 4;
-    display: flex;
-    flex-direction: column;
-    background-color: #39393b;
-    transition: all 0.3s ease 0s;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
   }
 
   .card__image-container {
     width: 100%;
-    padding-top: 76.25%;
-    overflow: hidden;
+    padding-top: 66.67%; // 3:2 aspect ratio
     position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
   }
 
-  .card__image-container {
-    img {
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+  .card:hover .card__image-container img {
+    transform: scale(1.05);
   }
 
   .card__content {
@@ -153,99 +144,57 @@ const Container = styled.div`
   }
 
   .card__title {
-    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
   }
 
-  .card__info {
-    display: flex;
-    align-self: end;
-    align-items: start;
-    flex-direction: column;
+  .text--medium {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
   }
 
-  .card__price {
-    margin-left: auto;
-    padding: 5px 20px;
-    background-color: #303032;
-    border-radius: 20px;
-  }
   a {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    color: #02a66e;
+    font-size: 18px;
+    font-weight: 600;
     text-decoration: none;
-    color: #007d52;
-    font-size: 32px;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3% 0%;
-    /* margin: 3% 0%; */
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #018756;
+    }
+
     .left {
-      font-family: Helvetica;
       display: flex;
       align-items: center;
-      gap: 10px;
-    }
-    &:hover {
-      text-decoration: underline;
+      justify-content: center;
+      gap: 8px;
     }
   }
 
-  @media only screen and (max-width: 1000px) {
-    .card {
-      grid-column-end: span 12;
+  @media (max-width: 768px) {
+    .heading h1 {
+      font-size: 36px;
     }
+
     .cards {
-      margin: 0% 10%;
-    }
-    .heading {
-      h1 {
-        font-size: 38px;
-      }
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
   }
 
-  @media only screen and (max-width: 700px) {
-    main {
-      grid-gap: 20px;
+  @media (max-width: 480px) {
+    .heading h1 {
+      font-size: 28px;
     }
-    .card {
-      grid-column-end: span 12;
-    }
-    .cards {
-      margin: 0% 6%;
-    }
-    .heading {
-      h1 {
-        font-size: 32px;
-      }
-    }
-  }
 
-  @media only screen and (max-width: 500px) {
-    main {
-      grid-template-columns: 10px repeat(6, 1fr) 10px;
-      grid-gap: 10px;
-    }
     .cards {
-      grid-column: 2 / span 12;
-      grid-template-columns: repeat(12, 1fr);
-      grid-gap: 12px;
-      margin: 0% 3%;
-    }
-    .card {
-      grid-column-end: span 6;
-    }
-    .heading {
-      h1 {
-        font-size: 28px;
-      }
-    }
-  }
-  @media only screen and (max-width: 381px) {
-    .heading {
-      h1 {
-        font-size: 22px;
-      }
+      grid-template-columns: 1fr;
     }
   }
 `;

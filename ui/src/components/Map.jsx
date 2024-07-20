@@ -82,6 +82,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 60px;
+    margin-top: 5%;
     p {
       font-size: 20px;
       padding: 3% 0% 3% 0%;

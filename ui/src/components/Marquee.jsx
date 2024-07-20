@@ -1,155 +1,138 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import news1 from "../assets/portfolio/new1.png";
 import news2 from "../assets/portfolio/news2.png";
 import news3 from "../assets/portfolio/news3.png";
 import news4 from "../assets/portfolio/news4.png";
 import news5 from "../assets/portfolio/news5.png";
 
-export default function () {
+const Marquee = () => {
+  const newsImages = [news1, news2, news3, news4, news5];
+
   return (
     <Container>
-      <div className="badge">Acharya Ashutosh Kumar in media</div>
-      <div className="slider">
-        <div className="slider-container">
-          <div className="slider-content-wrapper">
-            <div style={{ display: "inline-block" }}>
-              <div className="pictures-container">
-                <div className="item">
-                  <img src={news1} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news2} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news3} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news4} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news5} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news3} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news2} alt="" />
-                </div>
-              </div>
-            </div>
-            <div style={{ display: "inline-block" }}>
-              <div className="pictures-container">
-                <div className="item">
-                  <img src={news1} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news2} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news3} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news4} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news5} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news3} alt="" />
-                </div>
-                <div className="item">
-                  <img src={news2} alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Badge>Acharya Ashutosh Kumar in media</Badge>
+      <SliderWrapper>
+        <SliderContainer>
+          <SliderContent>
+            {[...Array(6)].map((_, index) => (
+              <ImageWrapper key={index}>
+                {newsImages.map((image, imgIndex) => (
+                  <ImageItem key={imgIndex}>
+                    <img src={image} alt={`News ${imgIndex + 1}`} />
+                  </ImageItem>
+                ))}
+              </ImageWrapper>
+            ))}
+          </SliderContent>
+        </SliderContainer>
+      </SliderWrapper>
     </Container>
   );
-}
+};
+
+export default Marquee;
 
 const Container = styled.div`
-  margin: 0;
-  padding: 0;
-  body {
-    margin: 0;
-  }
-  .badge {
-    margin: 0;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #bedcd5;
-    color: #fff;
-    font-size: 36px;
-    font-weight: bolder;
-  }
-  .slider {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background-color: #ebf4f1;
+  width: 100%;
+  overflow: hidden;
+`;
+
+const Badge = styled.div`
+  background-color: #02a66e;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Responsive font size */
+  font-size: 36px;
+
+  @media (max-width: 1200px) {
+    font-size: 32px;
   }
 
-  .slider-container {
-    overflow: hidden;
-    white-space: nowrap;
+  @media (max-width: 992px) {
+    font-size: 28px;
   }
 
-  .slider-content-wrapper {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: marquee 20s linear infinite;
+  @media (max-width: 768px) {
+    font-size: 24px;
   }
 
-  .pictures-container {
-    white-space: nowrap;
-    overflow: hidden;
+  @media (max-width: 576px) {
+    font-size: 20px;
   }
 
-  .item {
-    display: inline-block;
-    margin-left: 30px;
-    height: 70%;
+  @media (max-width: 400px) {
+    font-size: 18px;
+  }
+`;
+
+const SliderWrapper = styled.div`
+  background-color: #ebf4f1;
+  padding: 20px 0;
+`;
+
+const SliderContainer = styled.div`
+  overflow: hidden;
+  white-space: nowrap;
+`;
+
+const marqueeAnimation = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+`;
+
+const SliderContent = styled.div`
+  display: inline-block;
+  white-space: nowrap;
+  animation: ${marqueeAnimation} 30s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  display: inline-block;
+`;
+
+const ImageItem = styled.div`
+  display: inline-block;
+  margin: 0 15px;
+  height: 60px;
+  width: 100px;
+  transition: transform 0.3s ease;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  @keyframes marquee {
-    from {
-      transform: translate3d(0, 0, 0);
-    }
-
-    to {
-      transform: translate3d(-50%, 0, 0);
-    }
+  &:hover {
+    transform: scale(1.1);
   }
 
-  @media screen and (max-width: 1400px) {
-    .badge {
-      font-size: 30px;
-    }
+  @media (max-width: 768px) {
+    height: 45px;
+    width: 75px;
+    margin: 0 10px;
   }
-  @media screen and (max-width: 1024px) {
-    .badge {
-      font-size: 26px;
-    }
-  }
-  @media screen and (max-width: 900px) {
-    .badge {
-      font-size: 22px;
-    }
-  }
-  @media screen and (max-width: 750px) {
-    .badge {
-      font-size: 20px;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    .badge {
-      font-size: 18px;
-    }
+
+  @media (max-width: 480px) {
+    height: 30px;
+    width: 50px;
+    margin: 0 5px;
   }
 `;

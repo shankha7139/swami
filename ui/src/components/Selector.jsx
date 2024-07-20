@@ -307,6 +307,7 @@ const Container = styled.div`
     }
     .disp {
       flex-direction: column;
+      gap: 0;
     }
     .right {
       img {
@@ -317,9 +318,10 @@ const Container = styled.div`
       padding: 0;
       margin: 0;
       .left {
-        padding: 0;
-        margin: 0;
+        padding: 0 !important ;
+        margin: 0 !important ;
         width: 100%;
+        height: 100%;
         h1 {
           font-size: 36px;
         }
